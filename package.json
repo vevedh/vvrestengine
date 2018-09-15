@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "fs-utils": "^0.7.0",
+    "mailer": "^0.6.7",
+    "morgan": "^1.9.1",
+    "node-restful": "^0.2.6",
+    "path": "^0.12.7"
+  }
+}

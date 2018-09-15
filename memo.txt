@@ -1,0 +1,24 @@
+// node-restful queries
+
+
+
+/users/?limit=5 will give you the first 5 items
+/users/?skip=5 will skip the first 5 and give you the rest
+/users/?limit=5&skip=5 will skip the first 5 and then give you the second 5
+
+Sorting the result
+Getting a sorted list is as easy as adding a sort querystring parameter with the property you want to sort on. /users/?sort=name will give you a list sorted on the name property, with an ascending sort order.
+
+Changing the sort order uses the same rules as the string notation of mongoose's sort filter. /users/?sort=-name will return the same list as before with a descending sort order.
+
+
+Filter	Query	Example	Description
+equal	equals	/users?gender=male or /users?gender__equals=male	both return all male users
+not equal	ne	/users?gender__ne=male	returns all users who are not male (female and x)
+greater than	gt	/users?age__gt=18	returns all users older than 18
+greater than or equal to	gte	/users?age__gte=18	returns all users 18 and older (age should be a number property)
+less than	lt	/users?age__lt=30	returns all users age 29 and younger
+less than or equal to	lte	/users?age__lte=30	returns all users age 30 and younger
+in	in	/users?gender__in=female,male	returns all female and male users
+nin	nin	/users?age__nin=18,30	returns all users with age other than 18 or 30
+Regex	regex	/users?username__regex=/^baugarten/i	returns all users with a username starting with baugarten
