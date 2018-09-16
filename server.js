@@ -40,7 +40,7 @@ var PACKAGE_JSON_PATH = path.resolve(PACKAGE_ROOT_PATH, 'package.json');
 /**
  *  Site web
  */
-app.use(express.static('www'));
+app.use(express.static('../portalvvdh/www'));
 
 /**
  *  Download directory
